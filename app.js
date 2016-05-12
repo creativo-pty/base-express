@@ -9,6 +9,7 @@ global.appRoot = path.resolve(__dirname);
 nunjucks.configure(appRoot + '/views', {
     express: app
 });
+app.set('view engine', 'html');
 
 app.use(express.static(appRoot + '/public'));
 app.use(bodyParser.json());

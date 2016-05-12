@@ -1,11 +1,11 @@
-var express = require('express')
-  , router = express.Router()
+var express = require('express');
+var router = express.Router();
 
-router.use('/comments', require('./comments'))
-router.use('/users', require('./users'))
+router.use('/comments', require('./comments'));
+router.use('/users', require('./users'));
 
-router.get('/', function(req, res) {
-  res.render('index')
-})
+router.get('/', function(request, response) {
+    response.render('index');
+});
 
-module.exports = router
+module.exports = router;

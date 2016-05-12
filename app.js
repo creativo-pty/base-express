@@ -1,11 +1,12 @@
 var express = require('express');
 var app = express();
+var nunjucks = require('nunjucks');
 var bodyParser = require('body-parser');
 var port = process.env.PORT || 3000;
 
-app.set('views', __dirname + '/views');
-app.engine('jade', require('jade').__express);
-app.set('view engine', 'jade');
+nunjucks.configure(__dirname + '/views', {
+    express: app
+});
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());

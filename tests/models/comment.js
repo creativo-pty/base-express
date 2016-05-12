@@ -1,6 +1,6 @@
 should = require('should');
 
-Comment = require( __dirname + '/models/comment');
+Comment = require( appRoot + '/models/comment');
 
 describe('Model Comment', function() {
 
